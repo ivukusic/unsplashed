@@ -1,4 +1,4 @@
-# EUDoctor app
+# Unsplashed
 
 [Link to RULEBOOK](RULEBOOK.md) - basic rules and branching strategy for application
 

@@ -23,13 +23,16 @@
     }
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.15.17",
     "@react-native-community/async-storage": "^1.12.1",
     "@react-navigation/native": "^6.0.7",
     "@react-navigation/stack": "^6.1.0",
+    "@reduxjs/toolkit": "^1.7.1",
     "babel-plugin-module-resolver": "^4.1.0",
     "babel-plugin-styled-components": "^2.0.2",
     "react": "17.0.2",
     "react-native": "0.67.1",
+    "react-native-flipper": "^0.131.1",
     "react-native-gesture-handler": "^2.2.0",
     "react-native-linear-gradient": "^2.5.6",
     "react-native-safe-area-context": "^3.3.2",
@@ -37,6 +40,10 @@
     "react-native-svg": "^12.1.1",
     "react-native-svg-transformer": "^1.0.0",
     "react-native-vector-icons": "^9.0.0",
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2",
+    "redux-flipper": "^2.0.1",
+    "redux-persist": "^6.0.0",
     "styled": "^1.0.0",
     "styled-components": "^5.3.3",
     "styled-system": "^5.1.5"
