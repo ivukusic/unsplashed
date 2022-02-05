@@ -3,8 +3,9 @@ import React, { useState } from 'react';
 import { Button, Container, CustomText } from '@common/components';
 
 import { Plus } from './styles';
+import { Props } from './types';
 
-export const ApproveButton = ({ active, onImageConfirm }): JSX.Element => {
+export const ApproveButton: React.FC<Props> = ({ active, onImageConfirm }) => {
   const [visible, setVisible] = useState(false);
 
   const handleConfirmImage = (value: boolean) => () => {

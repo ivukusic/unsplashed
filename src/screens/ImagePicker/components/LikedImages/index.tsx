@@ -4,6 +4,7 @@ import { Container, CustomText, TouchableOpacity } from '@common/components';
 import { Colors } from '@common/themes';
 
 import Placeholder from '../Placeholder';
+import { useHook } from './hook';
 import {
   Liked,
   LikedContainer,
@@ -12,9 +13,9 @@ import {
   LikedOverlay,
   PlaceholderContainer,
 } from './styles';
-import { useHook } from './useHook';
+import { Props } from './types';
 
-export const LikedImages = ({ fetchImage, liked }): JSX.Element => {
+export const LikedImages: React.FC<Props> = ({ fetchImage, liked }) => {
   const { handleViewAll } = useHook();
 
   const renderPlaceholder = () => (

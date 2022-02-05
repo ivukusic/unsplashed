@@ -1,8 +1,9 @@
 import React from 'react';
 
 import { Container, DeleteContainer, DeleteIcon, Image, Overlay } from './styles';
+import { Props } from './types';
 
-export const LikedImage = ({ image, removeLikedImage }): JSX.Element => {
+export const LikedImage: React.FC<Props> = ({ image, removeLikedImage }) => {
   const handleRemovePress = () => {
     removeLikedImage(image);
   };

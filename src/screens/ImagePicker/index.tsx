@@ -5,10 +5,10 @@ import { Screen } from '@common/components';
 import ActiveCard from './components/ActiveCard';
 import ApproveButtons from './components/ApproveButtons';
 import LikedImages from './components/LikedImages';
+import { useHook } from './hook';
 import { Divider } from './styles';
-import { useHook } from './useHook';
 
-export const ImagePicker = (): JSX.Element => {
+export const ImagePicker: React.FC = () => {
   const { active, fetchImage, liked, onImageConfirm } = useHook();
 
   return (

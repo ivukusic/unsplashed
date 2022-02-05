@@ -1,39 +1,15 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { Animated, Dimensions } from 'react-native';
+import React from 'react';
+import { Dimensions } from 'react-native';
 
 import Placeholder from '../Placeholder';
+import { useHook } from './hook';
 import { Image, MainImage, Overlay } from './styles';
+import { Props } from './types';
 
 const { width } = Dimensions.get('screen');
 
-export const ActiveCard = ({ fetchImage, uri }): JSX.Element => {
-  const [current, setCurrent] = useState(null);
-
-  const opacity = useRef(new Animated.Value(0)).current;
-  const translate = useRef(new Animated.Value(0)).current;
-
-  const updateVisibility = useCallback(
-    newValue => {
-      if (newValue) {
-        setCurrent(newValue);
-        Animated.timing(opacity, { toValue: 1, duration: 400, useNativeDriver: true }).start();
-      } else {
-        Animated.timing(translate, { toValue: 1, duration: 400, useNativeDriver: true }).start();
-        Animated.timing(opacity, { toValue: 0, duration: 800, useNativeDriver: true }).start();
-        setTimeout(() => {
-          setCurrent(newValue);
-          translate.setValue(0);
-        }, 600);
-      }
-    },
-    [opacity, translate],
-  );
-
-  useEffect(() => {
-    if ((uri && !current) || (!uri && current)) {
-      updateVisibility(uri);
-    }
-  }, [updateVisibility, opacity, uri, current]);
+export const ActiveCard: React.FC<Props> = ({ fetchImage, uri }) => {
+  const { current, opacity, translate } = useHook({ uri });
 
   const translateX = translate.interpolate({
     inputRange: [0, 1],

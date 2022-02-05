@@ -3,13 +3,13 @@ import React from 'react';
 import { Screen } from '@common/components';
 
 import LikedImage from './components/LikedImages';
-import { useHook } from './useHook';
+import { useHook } from './hook';
 
-export const LikedImages = (): JSX.Element => {
+export const LikedImages: React.FC = () => {
   const { liked, removeLikedImage } = useHook();
 
   return (
-    <Screen mode="scroll" flexDirection="row" flexWrap="wrap" padding={11}>
+    <Screen mode="scroll" flexDirection="row" flexWrap="wrap" pl={11} pr={11}>
       {liked?.map(image => (
         <LikedImage key={image.urls.regular} image={image} removeLikedImage={removeLikedImage} />
       ))}

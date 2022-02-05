@@ -1,8 +1,9 @@
 import React from 'react';
 
 import { Container, Plus } from './styles';
+import { Props } from './types';
 
-export const Placeholder = ({ large = false, onPress }): JSX.Element => (
+export const Placeholder: React.FC<Props> = ({ large = false, onPress }) => (
   <Container onPress={onPress}>
     <Plus large={large} />
   </Container>

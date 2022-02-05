@@ -1,14 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-export interface ImageType {
-  urls: {
-    full: string;
-    raw: string;
-    regular: string;
-    small: string;
-    thumb: string;
-  };
-}
+import { ImageType } from '@common/types';
 
 export interface ImageState {
   active: ImageType | null;

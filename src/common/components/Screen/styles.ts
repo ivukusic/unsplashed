@@ -8,7 +8,7 @@ const generatePadding =
   (props: any, options: string[]): number | undefined => {
     const value = `${props[options[0]] || ''}` || `${props[options[1]] || ''}`.replace('px', '');
     if (!value) {
-      return undefined;
+      return 15;
     }
     return parseInt(value, 10);
   };
