@@ -14,6 +14,7 @@ const colors = {
 
   border: '#D9D9D9',
   header: '#131A2E',
+  light: '#cacaca',
 };
 
 export default colors;

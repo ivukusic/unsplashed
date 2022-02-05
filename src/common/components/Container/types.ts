@@ -1,3 +1,14 @@
-import { BackgroundColorProps, FlexboxProps, LayoutProps, SpaceProps } from 'styled-system';
+import {
+  BackgroundColorProps,
+  BorderProps,
+  FlexboxProps,
+  LayoutProps,
+  SpaceProps,
+} from 'styled-system';
 
-export interface Props extends SpaceProps, LayoutProps, FlexboxProps, BackgroundColorProps {}
+export interface Props
+  extends BorderProps,
+    SpaceProps,
+    LayoutProps,
+    FlexboxProps,
+    BackgroundColorProps {}

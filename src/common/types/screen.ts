@@ -1,3 +1,4 @@
 export enum SCREENS {
-  Home = 'Home',
+  ImagePicker = 'ImagePicker',
+  LikedImages = 'LikedImages',
 }

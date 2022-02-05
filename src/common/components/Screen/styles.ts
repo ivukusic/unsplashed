@@ -5,11 +5,13 @@ import { compose, flexbox, layout, space } from 'styled-system';
 
 const generatePadding =
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  (props: any, options: string[]): number =>
-    parseInt(
-      `${props[options[0]] || ''}` || `${props[options[1]] || ''}`.replace('px', '') || '15',
-      10,
-    );
+  (props: any, options: string[]): number | undefined => {
+    const value = `${props[options[0]] || ''}` || `${props[options[1]] || ''}`.replace('px', '');
+    if (!value) {
+      return undefined;
+    }
+    return parseInt(value, 10);
+  };
 
 const generateMargin =
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -25,8 +27,11 @@ const generateMargin =
 const scrollContentContainerStyle = (props): any => ({
   contentContainerStyle: {
     // FLEXBOX PROPS
-    flex: props.flex || 1,
+
     flexGrow: props.flexGrow || 1,
+    flexWrap: props.flexWrap || 'nowrap',
+    flexDirection: props.flexDirection || 'row',
+
     alignItems: props.alignItems || 'flex-start',
     justifyContent: props.justifyContent || 'flex-start',
     alignContent: props.alignContent || undefined,
@@ -74,4 +79,7 @@ export const ViewContainer = styled.View`
   ${compose(flexbox, layout, space)}
 `;
 
-export const Scroll = styled(ScrollView).attrs(scrollContentContainerStyle)``;
+export const Scroll = styled(ScrollView).attrs(scrollContentContainerStyle)`
+  padding: 0;
+  margin: 0;
+`;
