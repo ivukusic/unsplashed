@@ -1,10 +1,10 @@
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import styled from 'styled-components/native';
 
-import TouchableOpacity from '@common/components/TouchableOpacity';
+import { Pressable } from '@common/components';
 import { Colors } from '@common/themes';
 
-export const Container = styled(TouchableOpacity)`
+export const Container = styled(Pressable)`
   flex: 1;
   align-items: center;
   justify-content: center;

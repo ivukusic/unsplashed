@@ -26,14 +26,14 @@
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.15.17",
-    "@react-native-community/async-storage": "^1.12.1",
-    "@react-navigation/native": "^6.0.7",
-    "@react-navigation/stack": "^6.1.0",
+    "@react-navigation/native": "^6.0.8",
+    "@react-navigation/stack": "^6.1.1",
     "@reduxjs/toolkit": "^1.7.1",
     "axios": "^0.25.0",
     "axios-mock-adapter": "^1.20.0",
     "babel-plugin-module-resolver": "^4.1.0",
     "babel-plugin-styled-components": "^2.0.2",
+    "lodash.debounce": "^4.0.8",
     "react": "17.0.2",
     "react-native": "0.67.1",
     "react-native-flipper": "^0.131.1",
@@ -110,7 +110,8 @@
       "node_modules/(?!(jest-)?@react-native|react-native|@react-native-community|@react-navigation)"
     ],
     "collectCoverageFrom": [
-      "src/**/*.{ts,tsx}"
+      "src/**/{!({styles,types}),}.{ts,tsx}",
+      "!src/common/types/*"
     ],
     "coverageThreshold": {
       "global": {

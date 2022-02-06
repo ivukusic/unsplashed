@@ -3,6 +3,8 @@ import { StatusBar } from 'react-native';
 
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
+import { Colors } from '@common/themes';
+
 import { useHook } from './hook';
 import { Scroll, ViewContainer } from './styles';
 import { Props } from './types';
@@ -31,8 +33,10 @@ export const Screen: React.FC<Props> = ({
     );
   };
 
-  const statusBarColor = header?.headerMode === 'default' ? 'white' : 'red';
-  const statusBarStyle = header?.headerMode === 'default' ? 'light-content' : 'dark-content';
+  const statusBarColor =
+    header?.headerMode === 'default' || !header?.headerMode ? Colors.header : 'white';
+  const statusBarStyle =
+    header?.headerMode === 'default' || !header?.headerMode ? 'light-content' : 'dark-content';
   return (
     <>
       <StatusBar animated translucent backgroundColor={statusBarColor} barStyle={statusBarStyle} />

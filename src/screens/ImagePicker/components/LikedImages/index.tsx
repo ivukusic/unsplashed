@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, CustomText, TouchableOpacity } from '@common/components';
+import { Container, CustomText, Pressable } from '@common/components';
 import { Colors } from '@common/themes';
 
 import Placeholder from '../Placeholder';
@@ -50,7 +50,7 @@ export const LikedImages: React.FC<Props> = ({ fetchImage, liked }) => {
       </CustomText>
       <Liked flexDirection="row">{renderContent()}</Liked>
       {!!liked.length && (
-        <TouchableOpacity onPress={handleViewAll}>
+        <Pressable onPress={handleViewAll}>
           <CustomText
             color={Colors.primary}
             fontWeight="black"
@@ -60,7 +60,7 @@ export const LikedImages: React.FC<Props> = ({ fetchImage, liked }) => {
           >
             VIEW ALL
           </CustomText>
-        </TouchableOpacity>
+        </Pressable>
       )}
     </Container>
   );

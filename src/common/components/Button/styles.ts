@@ -3,10 +3,8 @@ import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import styled from 'styled-components/native';
 import { compose, flexbox, layout, space } from 'styled-system';
 
-import { CustomText } from '@common/components';
+import { CustomText, Pressable } from '@common/components';
 import { Colors } from '@common/themes';
-
-import TouchableOpacity from '../TouchableOpacity';
 
 const style = {
   default: {
@@ -23,7 +21,7 @@ const style = {
   },
 };
 
-export const ButtonWrapper = styled(TouchableOpacity)`
+export const ButtonWrapper = styled(Pressable)`
   overflow: hidden;
   flex-direction: row;
   justify-content: center;

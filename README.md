@@ -46,7 +46,7 @@ $ cd ios/ && pod install
 
 #### iOS
 
-Run command to open iOS simulator and run app:
+Run command to open iOS simulator and start the app:
 
 ```bash
 npx react-native run-ios
@@ -54,12 +54,11 @@ npx react-native run-ios
 
 #### Android
 
-Open Android emulator (recommended [Genymotion](https://www.genymotion.com)) and
-run command: (Or connect real device via USB)
+Open Android emulator or connect real device via USB
+Run command to start the app:
 
 ```bash
-npx react-native start
-npx react-native run-android
+react-native run-android
 ```
 
 ---

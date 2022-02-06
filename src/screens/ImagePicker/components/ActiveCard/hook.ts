@@ -5,8 +5,6 @@ import { ImageType } from '@common/types';
 
 import { UseHookProps, UseHookReturnType } from './types';
 
-jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
-
 export const useHook = ({ uri }: UseHookProps): UseHookReturnType => {
   const [current, setCurrent] = useState<ImageType | undefined>();
 

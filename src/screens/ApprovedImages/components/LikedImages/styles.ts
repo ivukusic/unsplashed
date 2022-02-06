@@ -3,7 +3,7 @@ import { Dimensions } from 'react-native';
 import VectorIcon from 'react-native-vector-icons/dist/FontAwesome';
 import styled from 'styled-components/native';
 
-import TouchableOpacity from '@common/components/TouchableOpacity';
+import { Pressable } from '@common/components';
 import { Colors } from '@common/themes';
 
 const { width } = Dimensions.get('screen');
@@ -25,7 +25,7 @@ export const Image = styled.Image`
   right: 0;
 `;
 
-export const DeleteContainer = styled(TouchableOpacity)`
+export const DeleteContainer = styled(Pressable)`
   padding: 6px 12px;
   margin: 4px;
   border-radius: 8px;
