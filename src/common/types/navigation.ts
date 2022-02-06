@@ -4,7 +4,7 @@ import { SCREENS } from './screen';
 
 export type RouteStackParamList = {
   [SCREENS.ImagePicker]: undefined;
-  [SCREENS.LikedImages]: undefined;
+  [SCREENS.ApprovedImages]: undefined;
 };
 
 export type RouterNavigationProp = StackNavigationProp<RouteStackParamList>;

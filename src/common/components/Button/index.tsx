@@ -11,18 +11,18 @@ export const Button: React.FC<Props> = ({
   type = 'default',
   onPress,
   containerProps = {},
-}) => {
-  return (
-    <ButtonWrapper
-      activeOpacity={1}
-      accessibilityRole="button"
-      onPress={onPress}
-      type={type}
-      {...containerProps}
-    >
-      {type === 'primary' && <ButtonBackground />}
-      {!!icon && <ButtonIcon color={Colors.white} name={icon} size={20} />}
-      {!!label && <ButtonLabel state={type}>{label}</ButtonLabel>}
-    </ButtonWrapper>
-  );
-};
+  testID = 'button',
+}) => (
+  <ButtonWrapper
+    activeOpacity={1}
+    accessibilityRole="button"
+    onPress={onPress}
+    type={type}
+    testID={testID}
+    {...containerProps}
+  >
+    {type === 'primary' && <ButtonBackground />}
+    {!!icon && <ButtonIcon color={Colors.white} name={icon} size={20} />}
+    {!!label && <ButtonLabel state={type}>{label}</ButtonLabel>}
+  </ButtonWrapper>
+);

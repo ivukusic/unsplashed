@@ -1,13 +1,13 @@
 # Unsplashed
 
-[Link to RULEBOOK](RULEBOOK.md) - basic rules and branching strategy for application
-
 ## Included
 
 - [React](https://github.com/facebook/react)
 - [React Native](https://github.com/facebook/react-native)
-- [Typescript](https://github.com/microsoft/TypeScript)
 - [React Navigation](https://github.com/react-community/react-navigation)
+- [Styled components](https://github.com/styled-components/styled-components)
+- [Typescript](https://github.com/microsoft/TypeScript)
+- [Jest](https://github.com/facebook/jest)
 
 ---
 
@@ -49,7 +49,7 @@ $ cd ios/ && pod install
 Run command to open iOS simulator and run app:
 
 ```bash
-$ npx react-native run-ios
+npx react-native run-ios
 ```
 
 #### Android
@@ -58,6 +58,28 @@ Open Android emulator (recommended [Genymotion](https://www.genymotion.com)) and
 run command: (Or connect real device via USB)
 
 ```bash
-$ npx react-native start
-$ npx react-native run-android
+npx react-native start
+npx react-native run-android
+```
+
+---
+
+## Testing
+
+Run unit tests
+
+```bash
+yarn test
+```
+
+Run unit tests in watch mode
+
+```bash
+yarn test_watch
+```
+
+Run unit tests and collect coverage
+
+```bash
+yarn test_coverage
 ```

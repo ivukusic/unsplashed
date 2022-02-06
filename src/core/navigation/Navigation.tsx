@@ -7,8 +7,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Colors } from '@common/themes';
 import { SCREENS } from '@common/types/screen';
 // SCREENS
+import ApprovedImages from '@screens/ApprovedImages';
 import ImagePicker from '@screens/ImagePicker';
-import LikedImages from '@screens/LikedImages';
 
 // INITIALIZE STACK
 const Stack = createStackNavigator();
@@ -27,7 +27,7 @@ export const Navigation: React.FC = () => (
       }}
     >
       <Stack.Screen component={ImagePicker} name={SCREENS.ImagePicker} />
-      <Stack.Screen component={LikedImages} name={SCREENS.LikedImages} />
+      <Stack.Screen component={ApprovedImages} name={SCREENS.ApprovedImages} />
     </Stack.Navigator>
   </NavigationContainer>
 );

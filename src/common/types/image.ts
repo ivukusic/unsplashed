@@ -8,15 +8,15 @@ export interface ImageUrlType {
 }
 
 export interface ImageType {
-  alt_description: string | null;
-  blur_hash: string;
-  color: string;
-  created_at: string;
-  description: string | null;
-  downloads: number;
+  alt_description?: string | null;
+  blur_hash?: string;
+  color?: string;
+  created_at?: string;
+  description?: string | null;
+  downloads?: number;
   id: string;
-  likes: number;
-  promoted_at: string;
-  updated_at: string;
+  likes?: number;
+  promoted_at?: string;
+  updated_at?: string;
   urls: ImageUrlType;
 }

@@ -3,16 +3,18 @@ import { StatusBar } from 'react-native';
 
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
+import { useHook } from './hook';
 import { Scroll, ViewContainer } from './styles';
 import { Props } from './types';
 
 export const Screen: React.FC<Props> = ({
   children,
-  header = { headerMode: 'default' },
+  header = { headerMode: 'default', headerTitle: '' },
   mode = 'view',
   ...rest
 }) => {
   const insets = useSafeAreaInsets();
+  useHook({ headerTitle: header.headerTitle || '' });
 
   const renderContent = (): ReactNode => {
     if (mode === 'scroll') {

@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 
 import { imageActions } from '@core/redux/image';
-import { selectLikedImages } from '@core/redux/image/selectors';
+import { selectLikedImages } from '@core/redux/image/Image.selectors';
 
 import { UseHookReturnType } from './types';
 

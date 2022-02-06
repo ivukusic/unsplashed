@@ -5,8 +5,10 @@ import { ImageType } from '@common/types';
 
 import { UseHookProps, UseHookReturnType } from './types';
 
+jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
+
 export const useHook = ({ uri }: UseHookProps): UseHookReturnType => {
-  const [current, setCurrent] = useState<ImageType | null>(null);
+  const [current, setCurrent] = useState<ImageType | undefined>();
 
   const opacity = useRef(new Animated.Value(0)).current;
   const translate = useRef(new Animated.Value(0)).current;

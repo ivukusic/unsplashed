@@ -18,11 +18,10 @@ export const { actions: imageActions, reducer: imageReducer } = createSlice({
   name: 'image',
   initialState: IMAGES_INITIAL_STATE,
   reducers: {
-    updateActiveImage: (state, action: PayloadAction<ImageType>) => ({
+    updateActiveImage: (state, action: PayloadAction<ImageType | null>) => ({
       ...state,
       active: action.payload,
     }),
-
     updateLiked: (state, action: PayloadAction<ImageType[]>) => ({
       ...state,
       active: null,

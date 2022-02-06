@@ -12,7 +12,7 @@ export const ImagePicker: React.FC = () => {
   const { active, fetchImage, liked, onImageConfirm } = useHook();
 
   return (
-    <Screen mode="view" alignItems="stretch">
+    <Screen alignItems="stretch" header={{ headerTitle: 'Unsplash' }} mode="view">
       <LikedImages liked={liked} fetchImage={fetchImage} />
       <Divider />
       <ActiveCard fetchImage={fetchImage} uri={active?.urls.regular} />

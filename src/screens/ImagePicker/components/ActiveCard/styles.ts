@@ -27,5 +27,5 @@ export const Overlay = styled(Animated.View)`
   right: 0;
   align-items: flex-end;
   justify-content: flex-start;
-  background-color: ${`${Colors.primary}22`};
+  background-color: ${`${Colors.primary}66`};
 `;

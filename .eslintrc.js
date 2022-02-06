@@ -5,9 +5,10 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'prettier',
     'plugin:prettier/recommended',
+    'plugin:jest/recommended',
   ],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'import', 'react-hooks', 'prettier'],
+  plugins: ['@typescript-eslint', 'import', 'react-hooks', 'prettier', 'jest'],
   globals: {
     __DEV__: 'readonly',
   },

@@ -8,7 +8,7 @@ export const useHook = (): UseHookReturnType => {
   const navigation: RouterNavigationProp = useNavigation();
 
   const handleViewAll = () => {
-    navigation.navigate(SCREENS.LikedImages);
+    navigation.navigate(SCREENS.ApprovedImages);
   };
 
   return { handleViewAll };

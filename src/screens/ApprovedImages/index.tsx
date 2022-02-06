@@ -5,11 +5,18 @@ import { Screen } from '@common/components';
 import LikedImage from './components/LikedImages';
 import { useHook } from './hook';
 
-export const LikedImages: React.FC = () => {
+export const ApprovedImages: React.FC = () => {
   const { liked, removeLikedImage } = useHook();
 
   return (
-    <Screen mode="scroll" flexDirection="row" flexWrap="wrap" pl={11} pr={11}>
+    <Screen
+      header={{ headerTitle: 'Approved Images' }}
+      mode="scroll"
+      flexDirection="row"
+      flexWrap="wrap"
+      pl={11}
+      pr={11}
+    >
       {liked?.map(image => (
         <LikedImage key={image.urls.regular} image={image} removeLikedImage={removeLikedImage} />
       ))}
@@ -17,4 +24,4 @@ export const LikedImages: React.FC = () => {
   );
 };
 
-export default LikedImages;
+export default ApprovedImages;

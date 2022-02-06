@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://api.unsplash.com/';
+export const BASE_URL = 'https://api.unsplash.com/';
 
 const KEYS = {
   ACCESS_KEY: 'BebAOgEw8ujwaShbHgmzuzXa_wY4Pjk3EmX9HTPY1LY',

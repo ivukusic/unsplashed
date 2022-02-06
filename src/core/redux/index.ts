@@ -13,7 +13,7 @@ const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
   debug: __DEV__,
-  whitelist: ['image'],
+  whitelist: process.env.JEST_WORKER_ID ? [] : ['image'],
 };
 
 const reducer = persistReducer(persistConfig, rootReducer);
@@ -41,6 +41,6 @@ const createStore = (preloadedState?: RootState) =>
 const store = createStore();
 const persistor = persistStore(store);
 
-export { store, persistor };
+export { createStore, store, persistor };
 
 export type RootState = ReturnType<typeof rootReducer>;

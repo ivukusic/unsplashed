@@ -10,7 +10,7 @@ import {
   selectDislikedImages,
   selectActiveImage,
   selectLikedImages,
-} from '@core/redux/image/selectors';
+} from '@core/redux/image/Image.selectors';
 
 import { UseHookReturnType } from './types';
 
@@ -56,5 +56,5 @@ export const useHook = (): UseHookReturnType => {
     }
   };
 
-  return { active, fetchImage, isLoading, liked, onImageConfirm };
+  return { active, disliked, fetchImage, isLoading, liked, onImageConfirm };
 };

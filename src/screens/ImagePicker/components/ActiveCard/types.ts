@@ -8,11 +8,11 @@ export interface Props {
 }
 
 export interface UseHookProps {
-  uri?: string;
+  uri: string | undefined;
 }
 
 export interface UseHookReturnType {
-  current: ImageType | null;
+  current?: ImageType;
   opacity: Animated.Value;
   translate: Animated.Value;
 }
